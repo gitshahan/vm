@@ -24,5 +24,5 @@ if ($vm.PowerState -eq "VM deallocated" -or $vm.PowerState -eq "VM stopped") {
     Start-AzVM -ResourceGroupName $resourceGroupName -Name $vmName
     Write-Output "VM started successfully."
 } else {
-    Write-Output "VM is already running."
+    Write-Output "VM is already running. ${vm.PowerState}"
 }
